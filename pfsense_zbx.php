@@ -410,7 +410,7 @@ class Discoveries
     {
         self::print_json(array_map(fn($client) => [
             "{#CLIENT}" => $client["vpnid"],
-            "{#NAME}", self::sanitize_name($client["name"]),
+            "{#NAME}" => self::sanitize_name($client["name"]),
         ], PfEnv::openvpn_get_active_clients()));
     }
 
