@@ -1069,10 +1069,10 @@ class Commands
 
             $cname = $id_name ? "con$id_name" : "con{$ike_id}00000";
 
-            return [
-                ...$p,
-                $cname => $ph1ent[$ike_id],
-            ];
+            return array_merge(
+                $p,
+                [$cname => $ph1ent[$ike_id]],
+            );
         }, []);
 
         // Phase-Status match borrowed from status_ipsec.php	
